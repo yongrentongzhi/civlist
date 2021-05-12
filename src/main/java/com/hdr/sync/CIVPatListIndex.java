@@ -1,12 +1,10 @@
 package com.hdr.sync;
 
-import com.goodwill.core.orm.MatchType;
-import com.goodwill.core.orm.PropertyFilter;
-import com.goodwill.hdr.cdssutil.solrsync.civ.CIVPatListUtil;
-import com.goodwill.hdr.cdssutil.utils.HbaseConnectUtils;
-import com.goodwill.hdr.cdssutil.utils.SolrCloudUtils;
-import com.goodwill.hdr.cdssutil.utils.SparkUtils;
-import com.goodwill.hdr.cdssutil.utils.Utils;
+
+import com.hdr.enums.MatchTypeEnum;
+import com.hdr.utils.SolrCloudUtils;
+import com.hdr.utils.SparkUtils;
+import com.hdr.vo.PropertyFilter;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -75,7 +73,7 @@ public class CIVPatListIndex {
 			List<PropertyFilter> inpFilters = new ArrayList<PropertyFilter>();
 			if (StringUtils.isNotBlank(pid)) {
 				PropertyFilter inpFilter = new PropertyFilter();
-				inpFilter.setMatchType(MatchType.EQ.getOperation());
+				inpFilter.setMatchType(MatchTypeEnum.EQ.getOperation());
 				inpFilter.setPropertyName("IN_PATIENT_ID");
 				inpFilter.setPropertyValue(pid);
 				inpFilters.add(inpFilter);

@@ -1,6 +1,6 @@
 package com.hdr.utils;
 
-import com.goodwill.core.utils.PropertiesUtils;
+
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -20,23 +20,23 @@ public class SolrCloudUtils {
 
 	protected static Logger logger = LoggerFactory.getLogger(SolrCloudUtils.class);
 	private static final String CONFIG_FILE_NAME = "hadoop.properties";
-	private static final String cloudSolrServerZK = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME, "zkHost");
-	private static final String DefaultCollection = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME,
+	private static final String cloudSolrServerZK = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME, "zkHost");
+	private static final String DefaultCollection = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME,
 			"civListCollection");
-	private static final String patInfoCollection = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME,
+	private static final String patInfoCollection = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME,
 			"patInfoCollection");
-	private static final String ZkClientTimeout = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME, "zkClientTimeout");
-	private static final String zkConnectTimeout = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME,
+	private static final String ZkClientTimeout = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME, "zkClientTimeout");
+	private static final String zkConnectTimeout = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME,
 			"zkConnectTimeout");
 
 	/**
 	 * 病历文书表
 	 */
-	public static final String EMRCONTENTTABLE = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME, "emrContentTable");
+	public static final String EMRCONTENTTABLE = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME, "emrContentTable");
 	/**
 	 * 病历文书增量表
 	 */
-	public static final String EMRCONTENTTABLEINC = PropertiesUtils.getPropertyValue(CONFIG_FILE_NAME,
+	public static final String EMRCONTENTTABLEINC = PropertiesUtil.getPropertyValue(CONFIG_FILE_NAME,
 			"emrContentIncTable");
 
 	private static CloudSolrServer cloudSolrServer;

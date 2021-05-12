@@ -40,6 +40,12 @@
             <artifactId>solr-solrj</artifactId>
             <version>4.10.3-cdh5.16.2</version>
         </dependency>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>json-lib-2.4-jdk15</version>
+        </dependency>
+
     </dependencies>
 
 </project>
